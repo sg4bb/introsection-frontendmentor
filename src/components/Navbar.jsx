@@ -1,15 +1,21 @@
+import MenuIcon from "./icons/MenuIcon";
+
 const Navbar = () => {
   return (
     <>
-      <nav>
-        <div className="flex items-center py-6">
-          {/* Brand section 🐱‍👤 */}
-          <section className="mr-20">
-            <h1 className="text-2xl font-semibold">snap</h1>
-          </section>
+      <div className="flex items-center py-6">
+        {/* Brand section 🐱‍👤 */}
+        <section className="mr-20 flex-grow md:flex-none">
+          <h1 className="text-2xl font-semibold">snap</h1>
+        </section>
 
+        <button className="block md:hidden">
+          <MenuIcon />
+        </button>
+
+        <nav className="flex items-center w-full">
           {/* Navbar navigation */}
-          <section className="flex-grow">
+          <section className="flex-grow hidden md:block">
             <ul className="flex flex-wrap space-x-4">
               <li>Features</li>
 
@@ -22,14 +28,16 @@ const Navbar = () => {
           </section>
 
           {/* Login and register */}
-          <section>
-            <div className="flex space-x-2">
-              <button>Login</button>
-              <button>Register</button>
+          <section className="hidden md:block">
+            <div className="flex flex-wrap space-x-2">
+              <button className="px-8 py-2 text-medium-gray">Login</button>
+              <button className="px-7 py-2 text-medium-gray outline outline-2 outline-medium-gray rounded-xl">
+                Register
+              </button>
             </div>
           </section>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </>
   );
 };

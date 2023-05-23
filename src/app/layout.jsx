@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={epilogue.className}>
+      <body className={`${epilogue.className} font-[18px]`}>
         <div className="grid container mx-auto">
           <Navbar />
           {children}
