@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { Epilogue } from "next/font/google";
 
@@ -11,7 +12,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={epilogue.className}>{children}</body>
+      <body className={epilogue.className}>
+        <div className="grid container mx-auto">
+          <Navbar />
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
