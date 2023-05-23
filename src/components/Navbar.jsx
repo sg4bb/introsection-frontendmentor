@@ -3,17 +3,33 @@
 import { useState } from "react";
 import MenuIcon from "@/components/icons/MenuIcon";
 import CloseIcon from "@/components/icons/CloseIcon";
+import ItemExpand from "@/components/ItemExpand";
 
 const Navbar = () => {
+  // handling the right drawer.
   const [openMenu, setOpenMenu] = useState(false);
 
   const handlingMenu = () => {
     setOpenMenu(!openMenu);
   };
 
+  // expand items
+  const featuresItems = [
+    { name: "Todo List", icon: "icon-todo" },
+    { name: "Calendar", icon: "icon-calendar" },
+    { name: "Reminders", icon: "icon-reminders" },
+    { name: "Planning", icon: "icon-planning" },
+  ];
+
+  const companyItems = [
+    { name: "History" },
+    { name: "Our Team" },
+    { name: "Blog" },
+  ];
+
   return (
     <>
-      <div className="container mx-auto px-3 md:px-auto flex items-center py-6">
+      <div className="container mx-auto lg:px-3 md:px-auto flex items-center py-6">
         {/* Brand section 🐱‍👤 */}
         <section className="w-full md:w-auto md:grow-0 md:mr-20">
           <h1 className="text-2xl font-bold">snap</h1>
@@ -41,20 +57,24 @@ const Navbar = () => {
               </button>
             </div>
 
-            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-1 md:space-x-4">
-              <li className="text-medium-gray">Features</li>
+            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-1 md:space-x-6">
+              <li className="text-black flex items-center gap-2">
+                <ItemExpand items={featuresItems} title="Features" />
+              </li>
 
-              <li className="text-medium-gray">Company</li>
+              <li className="text-black font-semibold">
+                <ItemExpand items={companyItems} title="Company" />
+              </li>
 
-              <li className="text-medium-gray">Careers</li>
+              <li className="text-black font-semibold">Careers</li>
 
-              <li className="text-medium-gray">About</li>
+              <li className="text-black font-semibold">About</li>
             </ul>
           </section>
 
           {/* Login and register */}
           <section>
-            <div className="flex flex-col space-y-0 md:flex-row flex-wrap md:space-y-2 md:space-x-2">
+            <div className="flex flex-col md:flex-row flex-wrap  md:space-x-2">
               <button className="px-8 py-2 text-medium-gray rounded-xl">
                 Login
               </button>
