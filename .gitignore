@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/intro-section-with-dropdown-navigation-main
+
 # testing
 /coverage
 
