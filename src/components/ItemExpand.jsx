@@ -2,14 +2,9 @@ import { useState } from "react";
 import Image from "next/image";
 
 //assets
-import ArrowUpIcon from "@/components/icons/ArrowUpIcon";
 import ArrowDownIcon from "@/components/icons/ArrowDownIcon";
-import CalendarIcon from "@/components/icons/CalendarIcon";
-import RemindersIcon from "@/components/icons/RemindersIcon";
-import PlanningIcon from "@/components/icons/PlanningIcon";
-import TodoIcon from "@/components/icons/TodoIcon";
 
-const ItemExpand = ({ items, title }) => {
+const ItemExpand = ({ items, title, haveIcon }) => {
   const [expand, setExpand] = useState(false);
 
   const handleExpand = () => {
@@ -29,7 +24,9 @@ const ItemExpand = ({ items, title }) => {
       <div
         className={`${
           expand ? "block" : "hidden"
-        } static md:absolute top-0 md:top-7 right-0 bg-transparent md:bg-white rounded-none md:rounded-lg text-sm shadow-none md:shadow-lg flex flex-col p-6`}
+        } static md:absolute top-0 md:top-7 right-0 bg-transparent md:bg-white  rounded-none md:rounded-lg text-sm shadow-none md:shadow-lg flex flex-col p-6 md:px-6 md:py-8 ${
+          haveIcon ? "md:w-[9.2rem]" : ""
+        }`}
       >
         <ul className="space-y-4">
           {items.map((item) => (
@@ -37,13 +34,17 @@ const ItemExpand = ({ items, title }) => {
               className="flex gap-2 text-medium-gray font-medium"
               key={item.name}
             >
-              {item.icon && (
-                <Image
-                  src={`src/assets/${item.icon}.svg`}
-                  width={16}
-                  height={16}
-                  alt="img"
-                />
+              {item.iconPath && (
+                <span>
+                  {item.iconPath && (
+                    <Image
+                      src={require(`src/assets/${item.iconPath || ""}.svg`)}
+                      alt={`${item.location}Icon`}
+                      width={16}
+                      height={16}
+                    />
+                  )}
+                </span>
               )}
 
               <span className={`${item.name.length > 7 && "truncate"}`}>

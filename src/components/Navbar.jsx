@@ -15,10 +15,22 @@ const Navbar = () => {
 
   // expand items
   const featuresItems = [
-    { name: "Todo List", icon: "icon-todo" },
-    { name: "Calendar", icon: "icon-calendar" },
-    { name: "Reminders", icon: "icon-reminders" },
-    { name: "Planning", icon: "icon-planning" },
+    {
+      name: "Todo List",
+      iconPath: "icon-todo",
+    },
+    {
+      name: "Calendar",
+      iconPath: "icon-calendar",
+    },
+    {
+      name: "Reminders",
+      iconPath: "icon-reminders",
+    },
+    {
+      name: "Planning",
+      iconPath: "icon-planning",
+    },
   ];
 
   const companyItems = [
@@ -29,7 +41,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container mx-auto lg:px-3 md:px-auto flex items-center py-6">
+      <div className="container mx-auto px-2 lg:px-3 md:px-auto flex items-center py-6">
         {/* Brand section 🐱‍👤 */}
         <section className="w-full md:w-auto md:grow-0 md:mr-20">
           <h1 className="text-2xl font-bold">snap</h1>
@@ -51,24 +63,36 @@ const Navbar = () => {
         >
           {/* Items */}
           <section className="grow-0 md:flex-grow">
-            <div className="relative block md:hidden mb-10 left-0 right-0 mr-2">
+            <div className="relative block md:hidden mb-20 left-0 right-0 mr-2">
               <button className="absolute right-0" onClick={handlingMenu}>
                 <CloseIcon />
               </button>
             </div>
 
-            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-1 md:space-x-6">
-              <li className="text-black flex items-center gap-2">
-                <ItemExpand items={featuresItems} title="Features" />
+            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-1 md:space-x-12">
+              <li className="text-medium-gray md:text-black flex items-center gap-2">
+                <ItemExpand
+                  items={featuresItems}
+                  title="Features"
+                  haveIcon={true}
+                />
               </li>
 
-              <li className="text-black font-semibold">
-                <ItemExpand items={companyItems} title="Company" />
+              <li className="text-medium-gray md:text-black font-semibold">
+                <ItemExpand
+                  items={companyItems}
+                  title="Company"
+                  haveIcon={false}
+                />
               </li>
 
-              <li className="text-black font-semibold">Careers</li>
+              <li className="text-medium-gray md:text-black font-semibold">
+                Careers
+              </li>
 
-              <li className="text-black font-semibold">About</li>
+              <li className="text-medium-gray md:text-black font-semibold">
+                About
+              </li>
             </ul>
           </section>
 
