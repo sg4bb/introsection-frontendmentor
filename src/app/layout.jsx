@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${epilogue.className} font-[18px]`}>
-        <div className="grid container mx-auto">
+        <div className="grid">
           <Navbar />
           {children}
         </div>
