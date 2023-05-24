@@ -41,10 +41,10 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="container mx-auto px-2 lg:px-3 md:px-auto flex items-center py-6">
+      <div className="relative container mx-auto md:px-auto lg:px-3 flex items-center py-6">
         {/* Brand section 🐱‍👤 */}
-        <section className="w-full md:w-auto md:grow-0 md:mr-20">
-          <h1 className="text-2xl font-bold">snap</h1>
+        <section className="w-full md:w-auto md:grow-0 mr-8 lg:mr-24">
+          <h1 className="text-3xl font-bold">snap</h1>
         </section>
 
         <button className="block flex-grow md:hidden" onClick={handlingMenu}>
@@ -56,7 +56,7 @@ const Navbar = () => {
           className={`md:static md:flex md:items-center md:w-full
             ${
               openMenu
-                ? "absolute flex flex-col top-0 right-0 z-10 min-h-screen w-3/5 gap-y-[21px] bg-white p-8"
+                ? "absolute flex flex-col top-0 -right-10 z-10 min-h-screen w-3/5 gap-y-[21px] bg-white p-8"
                 : "hidden"
             }
         `}
@@ -69,7 +69,7 @@ const Navbar = () => {
               </button>
             </div>
 
-            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-1 md:space-x-12">
+            <ul className="flex flex-col space-y-4 md:flex-row flex-wrap md:space-y-0 space-x-4 lg:space-x-12">
               <li className="text-medium-gray md:text-black flex items-center gap-2">
                 <ItemExpand
                   items={featuresItems}
@@ -98,7 +98,7 @@ const Navbar = () => {
 
           {/* Login and register */}
           <section>
-            <div className="flex flex-col md:flex-row flex-wrap  md:space-x-2">
+            <div className="flex flex-col md:flex-row flex-wrap lg:space-x-2">
               <button className="px-8 py-2 text-medium-gray rounded-xl">
                 Login
               </button>
