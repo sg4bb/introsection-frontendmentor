@@ -41,4 +41,4 @@ npm install
 npm run dev
 ```
 
-##### Then, go to http://localhost:3000 on in your web browser.
+##### Then, go to http://localhost:3000 in your web browser.
