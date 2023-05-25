@@ -1,34 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# <center>Intro-section FrontendMentor challengue</center>
 
-## Getting Started
+![design-project-transp](https://github.com/sg4bb/introsection-frontendmentor/assets/98561596/71a5ffb9-c1c7-47b9-8831-cfa7e81470b0)
 
-First, run the development server:
+This is a solution to the [Intro section with dropdown navigation challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. It was developed with Next.js and Tailwind for the styles to every component.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+
+You can see the project on the [live demo](https://introsection-frontendmentor.vercel.app/) 🐱‍👤
+
+<br>
+
+<hr>
+
+<br>
+
+### <center>To run the project locally. Follow the steps:</center>
+
+<br>
+
+##### 1. Clone the repo on your device with:
+```
+git clone https://github.com/sg4bb/introsection-frontendmentor.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+##### 2. Go to the directory introsection-frontendmentor
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+cd introsection-frontendmentor
+```
 
-## Learn More
+##### 3. Install dependencies
 
-To learn more about Next.js, take a look at the following resources:
+```
+npm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##### 4. Run your environment server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```
+npm run dev
+```
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+##### Then, go to http://localhost:3000 on in your web browser.
